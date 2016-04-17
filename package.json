@@ -1,0 +1,37 @@
+{
+  "name": "pm2-restapi-web",
+  "version": "0.0.1",
+  "description": "fontend of pm2-restapi",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiilei/pm2-restapi-web.git"
+  },
+  "author": "xilei125@163.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xiilei/pm2-restapi-web/issues"
+  },
+  "homepage": "https://github.com/xiilei/pm2-restapi-web#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.3",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.7.6",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-react-jsx": "^6.7.5",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "less": "^2.6.1",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7"
+  }
+}
