@@ -3,8 +3,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     context:__dirname+'/public',
     entry:{
-        'vendor':['jquery','bootstrap','react','react-dom'],
-        'index':'./entry'
+        'all':['jquery','react-bootstrap','react','react-dom','./entry']
     },
     output:{
             filename: '[name]-bundle.js',
