@@ -38,6 +38,9 @@ if(process.env.NODE_ENV == 'production'){
     config.plugins.push(new webpack.optimize.UglifyJsPlugin({compress:{
         warnings: false
     }}));
+    config.plugins.push(new webpack.optimize.OccurrenceOrderPlugin());
+}else{
+    config.plugins.push(new webpack.HotModuleReplacementPlugin());
 }
 
 
