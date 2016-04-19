@@ -1,12 +1,14 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var webpack = require('webpack');
 
-module.exports = {
+var config = {
     context:__dirname+'/public',
     entry:{
-        'all':['jquery','react-bootstrap','react','react-dom','./entry']
+        'vendor':['jquery','react','react-dom','react-bootstrap'],
+        'index' :'./entry'
     },
     output:{
-            filename: '[name]-bundle.js',
+            filename: '[name].bundle.js',
             path: __dirname+'/public/build',
             publicPath:'/assets/build/'
     },
@@ -16,12 +18,27 @@ module.exports = {
     module: {
       loaders: [
         { test: /\.jsx?$/,exclude: /node_modules/,loader: 'babel'},
-        { test: /\.css$/, loader: "css"},
+        { test: /\.css$/,exclude: /node_modules/, loader: "css"},
         { test: /\.less$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader") },
         { test: /\.(eot|woff|woff2|ttf|svg)$/, loader: "file-loader" }
       ]
     },
     plugins: [
-        new ExtractTextPlugin("[name]-bundle.css")
+        new ExtractTextPlugin("[name].bundle.css"),
+        new webpack.optimize.CommonsChunkPlugin('vendor', '[name].bundle.js' )
     ]
 };
+
+if(process.env.NODE_ENV == 'production'){
+    config.plugins.push(new webpack.DefinePlugin({
+                'process.env':{
+                    NODE_ENV:'"production"'
+                }
+    }))
+    config.plugins.push(new webpack.optimize.UglifyJsPlugin({compress:{
+        warnings: false
+    }}));
+}
+
+
+module.exports= config;
