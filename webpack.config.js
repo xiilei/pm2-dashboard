@@ -4,7 +4,7 @@ var webpack = require('webpack');
 var config = {
     context:__dirname+'/public',
     entry:{
-        'vendor':['jquery','react','react-dom','react-bootstrap'],
+        'vendor':['jquery','react','react-dom'],
         'index' :'./entry'
     },
     output:{
@@ -42,6 +42,5 @@ if(process.env.NODE_ENV == 'production'){
 }else{
     config.plugins.push(new webpack.HotModuleReplacementPlugin());
 }
-
 
 module.exports= config;
