@@ -18,13 +18,13 @@ var config = {
     module: {
       loaders: [
         { test: /\.jsx?$/,exclude: /node_modules/,loader: 'babel'},
-        { test: /\.css$/,exclude: /node_modules/, loader: "css"},
+        { test: /\.css$/,exclude: /node_modules/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")},
         { test: /\.less$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader") },
         { test: /\.(eot|woff|woff2|ttf|svg)$/, loader: "file-loader" }
       ]
     },
     plugins: [
-        new ExtractTextPlugin("[name].bundle.css"),
+        new ExtractTextPlugin("css/[name].bundle.css"),
         new webpack.optimize.CommonsChunkPlugin('vendor', '[name].bundle.js' )
     ]
 };
