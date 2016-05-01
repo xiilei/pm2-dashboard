@@ -5,7 +5,7 @@ var path = require('path');
 var config = {
     context:__dirname+'/public',
     entry:{
-        'vendor':['jquery','react','react-dom'],
+        'vendor':['jquery','react','react-dom','flotjs'],
         'index' :'./entry'
     },
     output:{
