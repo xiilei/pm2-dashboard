@@ -1,17 +1,22 @@
 var React = require('react');
-var FlotPanel = require('./FlotPanel');
+var ChartPanel = require('./ChartPanel');
+var LogPanel = require('./LogPanel');
 
 var Metrics = React.createClass({
-    displayName:'Metrics',
     render:function(){
         return (
             <div className="metrics">
                 <div className="row">
                     <div className="col-md-6">
-                        <FlotPanel name="Memory loaded" />
+                        <ChartPanel title="Memory loaded" />
                     </div>
                     <div className="col-md-6">
-                        <FlotPanel name="CPU loaded" />
+                        <ChartPanel title="CPU loaded" />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-12">
+                        <LogPanel title="Real-time logs"/>
                     </div>
                 </div>
             </div>

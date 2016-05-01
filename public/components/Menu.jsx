@@ -1,12 +1,12 @@
 var React = require('react');
+var MenuHeader = require('./MenuHeader');
 
 var Menu = React.createClass({
-    displayName:'Menu',
     render:function(){
         return (
             <nav className="navbar-default navbar-static-side">
             <ul className="nav nav-pills nav-stacked nav-pills-stacked-example">
-
+                <MenuHeader title="localhost"/>
                 <li className="active">
                     <a href="#">Fork<span className="badge pull-right">5</span></a>
                 </li>

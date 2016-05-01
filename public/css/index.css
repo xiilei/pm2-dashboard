@@ -55,3 +55,21 @@ body{
     border-width: 3px 0 1px 0;
     border-radius: 0;
 }
+.nav-header{
+    padding: 15px;
+    color: #DFE4ED;
+}
+.nav-header > h3 > a{
+    font-size: 14px;
+}
+
+.log-panel-body{
+    padding: 1px;
+}
+.log-table{
+    margin-bottom: 0px;
+    color: #555;
+}
+.log-table > tbody >tr.first-line > td{
+    border-top: 0 none;
+}
