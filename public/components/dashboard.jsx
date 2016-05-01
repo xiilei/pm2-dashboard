@@ -53,12 +53,12 @@ var Menu = React.createClass({
 var Nav = React.createClass({
     displayName:'Nav',
     getInitialState:function(){
-        return {now:(new Date).toString()}
+        return {now:new Date}
     },
     componentDidMount:function(){
         var self = this;
         setInterval(function(){
-            self.setState({now:(new Date).toString()});
+            self.setState({now:new Date});
         },1000);
     },
     render:function(){
@@ -72,7 +72,7 @@ var Nav = React.createClass({
                     <div className="nav navbar-nav">
                     </div>
                     <div className="nav navbar-nav navbar-right">
-                        <li><a href="#">{this.state.now}</a></li>
+                        <li><a href="#">{this.state.now.toString()}</a></li>
                         <li><a href="#"><span className="label label-success">online</span></a></li>
                     </div>
                 </div>

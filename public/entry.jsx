@@ -1,7 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-require('bootstrap/less/bootstrap.less');
+require('bootstrap.css');
 require('./css/index.css');
 
 var Dashboard = require('./components/dashboard');
