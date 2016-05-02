@@ -1,6 +1,7 @@
 var React = require('react');
 var LogTable = require('./LogTable');
 var Switch = require('rc-switch');
+var Panel = require('react-bootstrap/lib/Panel');
 
 require('rc-switch/assets/index.css');
 
@@ -9,13 +10,13 @@ var LogPanel = React.createClass({
         console.log('real-time logs switch:',value);
     },
     render:function(){
+        var header = (
+            <div>{this.props.title} <Switch className="pull-right" onChange={this.onSwitch}/></div>
+        );
         return (
-            <div className="panel prw-panel">
-                <div className="panel-heading">{this.props.title} <Switch className="pull-right" onChange={this.onSwitch}/></div>
-                <div className="panel-body log-panel-body">
-                    <LogTable />
-                </div>
-            </div>
+            <Panel header={header}>
+                <LogTable />
+            </Panel>
         )
     }
 });

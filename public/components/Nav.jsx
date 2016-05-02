@@ -1,4 +1,9 @@
 var React = require('react');
+var BNav = require('react-bootstrap/lib/Nav');
+var NavItem = require('react-bootstrap/lib/NavItem');
+var Navbar = require('react-bootstrap/lib/Navbar');
+var Label  = require('react-bootstrap/lib/Label');
+var Glyphicon = require('react-bootstrap/lib/Glyphicon');
 
 var Nav = React.createClass({
     componentWillMount:function(){
@@ -20,23 +25,21 @@ var Nav = React.createClass({
     },
     render:function(){
         return (
-           <nav className="navbar navbar-default prw-navbar">
-              <div className="container-fluid">
-                <div className="navbar-header">
+        <Navbar className="prw-navbar" fluid={true}>
+             <Navbar.Header>
+                <Navbar.Brand>
                     <strong className="navbar-brand">{this.props.name}</strong>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <div className="nav navbar-nav">
-                    </div>
-                    <div className="nav navbar-nav navbar-right">
-                        <li><a href="#"><span className="label label-success">online</span></a></li>
-                        <li><a href="#">{this.state.now.toString()}</a></li>
-                        <li><a href="#"><i className="glyphicon glyphicon-refresh"></i></a></li>
-                    </div>
-                </div>
-              </div>
-          </nav>
-        )
+                </Navbar.Brand>
+             </Navbar.Header>
+             <Navbar.Collapse>
+                <BNav pullRight>
+                    <NavItem><Label bsStyle="success">online</Label></NavItem>
+                    <NavItem>{this.state.now.toString()}</NavItem>
+                    <NavItem><Glyphicon glyph="refresh" /></NavItem>
+                </BNav>
+             </Navbar.Collapse>
+        </Navbar>
+        );
     }
 });
 

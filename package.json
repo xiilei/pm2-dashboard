@@ -22,6 +22,7 @@
     "jquery": "^2.2.3",
     "rc-switch": "^1.4.2",
     "react": "^15.0.1",
+    "react-bootstrap": "^0.29.3",
     "react-dom": "^15.0.1"
   },
   "devDependencies": {

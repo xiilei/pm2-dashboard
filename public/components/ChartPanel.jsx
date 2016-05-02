@@ -1,5 +1,6 @@
 var React = require('react');
 var Chart = require('./Chart');
+var Panel = require('react-bootstrap/lib/Panel');
 
 function getRandomData(maximum) {
     var data = [];
@@ -28,12 +29,9 @@ var ChartPanel = React.createClass({
 
     render:function(){
         return (
-            <div className="panel prw-panel">
-                <div className="panel-heading">{this.props.title}</div>
-                <div className="panel-body" ref="body">
-                    <Chart series={this.getSeries()} height='200px'/>
-                </div>
-            </div>
+            <Panel header={this.props.title}>
+                <Chart series={this.getSeries()} height='200px'/>
+            </Panel>
         );
     }
 });

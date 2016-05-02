@@ -44,16 +44,17 @@ body{
     margin-left: 0;
     margin-right:0;
 }
-.prw-panel{
+#dashboard .panel-default{
     border:0;
     border-radius: 0;
 }
-.prw-panel .panel-heading{
+#dashboard .panel-default > .panel-heading{
     border-color: #e7eaec;
     border-image: none;
     border-style: solid;
-    border-width: 3px 0 1px 0;
+    border-width: 4px 0 1px 0;
     border-radius: 0;
+    background-color: inherit;
 }
 .prw-navbar{
     margin-bottom: 10px;
@@ -66,7 +67,7 @@ body{
     font-size: 14px;
 }
 
-.log-panel-body{
+#dashboard .panel-body{
     padding: 1px;
 }
 .log-table{
