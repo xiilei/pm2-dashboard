@@ -20,14 +20,18 @@ function getRandomData(maximum) {
  */
 var ChartPanel = React.createClass({
     componentDidMount:function(){
-        this.refs.chart;
     },
+
+    getSeries:function(){
+        return getRandomData(200);
+    },
+
     render:function(){
         return (
             <div className="panel prw-panel">
                 <div className="panel-heading">{this.props.title}</div>
-                <div className="panel-body">
-                    <Chart series={getRandomData(200)} height='200px'/>
+                <div className="panel-body" ref="body">
+                    <Chart series={this.getSeries()} height='200px'/>
                 </div>
             </div>
         );

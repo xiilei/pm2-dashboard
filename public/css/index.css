@@ -2,7 +2,7 @@ body{
     height: 100%;
     background-color: #2f4050;
 }
-.col-xs-2,.col-xs-10{
+.col-lg-2,.col-lg-10{
     padding-left: 0px;
     padding-right: 0px;
 }
@@ -33,7 +33,7 @@ body{
     border-color:inherit;
     background-color: inherit
 }
-#dashboard .wrapper{
+#dashboard .app{
     background-color: #f3f3f4;
 }
 
@@ -55,6 +55,9 @@ body{
     border-width: 3px 0 1px 0;
     border-radius: 0;
 }
+.prw-navbar{
+    margin-bottom: 10px;
+}
 .nav-header{
     padding: 15px;
     color: #DFE4ED;
@@ -72,4 +75,12 @@ body{
 }
 .log-table > tbody >tr.first-line > td{
     border-top: 0 none;
+}
+
+.controls{
+    margin-bottom: 10px;
+    text-align: right;
+}
+.controls > button{
+    margin:0 5px;
 }

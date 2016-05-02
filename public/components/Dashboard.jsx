@@ -18,8 +18,8 @@ var Dashboard = React.createClass({
         return (
             <div className="container-fluid">
                 <div className="row">
-                    <div className="menu col-xs-2"><Menu /></div>
-                    <div className="wrapper col-xs-10" style={{minHeight:this.state.minHeight}}>
+                    <div className="menu col-lg-2"><Menu /></div>
+                    <div className="app col-lg-10" style={{minHeight:this.state.minHeight}}>
                         <Nav name="Mock Server" />
                         <Metrics />
                     </div>

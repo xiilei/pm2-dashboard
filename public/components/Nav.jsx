@@ -20,7 +20,7 @@ var Nav = React.createClass({
     },
     render:function(){
         return (
-           <nav className="navbar navbar-default">
+           <nav className="navbar navbar-default prw-navbar">
               <div className="container-fluid">
                 <div className="navbar-header">
                     <strong className="navbar-brand">{this.props.name}</strong>
