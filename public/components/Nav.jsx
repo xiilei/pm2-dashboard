@@ -1,3 +1,4 @@
+var moment = require('moment');
 var React = require('react');
 var BNav = require('react-bootstrap/lib/Nav');
 var NavItem = require('react-bootstrap/lib/NavItem');
@@ -10,12 +11,12 @@ var Nav = React.createClass({
         this.timer = null;
     },
     getInitialState:function(){
-        return {now:new Date}
+        return {now:moment().format('YYYY-MM-DD hh:mm:ss')}
     },
     componentDidMount:function(){
         var self = this;
         this.timer = setInterval(function(){
-            self.setState({now:new Date});
+            self.setState({now:moment().format('YYYY-MM-DD hh:mm:ss')});
         },1000);
     },
     componentWillUnmount:function(){

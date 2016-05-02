@@ -5,7 +5,7 @@ var path = require('path');
 var config = {
     context:__dirname+'/public',
     entry:{
-        'vendor':['jquery','react','react-dom','react-bootstrap','flotjs','rc-switch'],
+        'vendor':['jquery','react','react-dom','react-bootstrap','rc-switch','moment','chart.js'],
         'index' :'./entry'
     },
     output:{
@@ -26,8 +26,7 @@ var config = {
             'bootstrap.css$':'bootstrap/dist/css/bootstrap.css',
             'react$':'react/dist/react.js',
             'react-dom$':'react-dom/dist/react-dom.js',
-            'react-bootstrap$':'react-bootstrap/dist/react-bootstrap.js',
-            'flotjs$':'flot/jquery.flot.js'
+            'react-bootstrap$':'react-bootstrap/dist/react-bootstrap.js'
         }
     },
     module: {

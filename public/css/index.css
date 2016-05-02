@@ -62,6 +62,7 @@ body{
 .nav-header{
     padding: 15px;
     color: #DFE4ED;
+    border-bottom:1px #293846 solid;
 }
 .nav-header > h3 > a{
     font-size: 14px;

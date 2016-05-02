@@ -9,12 +9,7 @@ function getRandomData(maximum) {
         var y = previous + Math.random() * 10 - 5;
         data.push(y < 0 ? 0 : y > 100 ? 100 : y);
     }
-    // zip the generated y values with the x values
-    var res = [];
-    for (var i = 0; i < data.length; ++i) {
-        res.push([i, data[i]])
-    }
-    return res;
+    return data;
 }
 /**
  * flot charts panel
@@ -24,7 +19,11 @@ var ChartPanel = React.createClass({
     },
 
     getSeries:function(){
-        return getRandomData(200);
+        var series = [];
+        for (var i =0; i <7; i++) {
+            series.push(Math.random()*98);
+        }
+        return series;
     },
 
     render:function(){
