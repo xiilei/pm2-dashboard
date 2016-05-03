@@ -49,6 +49,8 @@ var config = {
 if(process.env.NODE_ENV == 'development'){
     config.plugins.push(new webpack.HotModuleReplacementPlugin());
 }else{
+    config.resolve.alias['react$'] = 'react/dist/react.min.js';
+    config.resolve.alias['react-dom$'] = 'react-dom/dist/react-dom.min.js';
     config.plugins.push(new webpack.DefinePlugin({
                 'process.env':{
                     NODE_ENV:'"production"'
