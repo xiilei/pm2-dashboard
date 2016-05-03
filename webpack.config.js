@@ -25,8 +25,7 @@ var config = {
             'jquery$':'jquery/dist/jquery.min.js',
             'bootstrap.css$':'bootstrap/dist/css/bootstrap.css',
             'react$':'react/dist/react.js',
-            'react-dom$':'react-dom/dist/react-dom.js',
-            'react-bootstrap$':'react-bootstrap/dist/react-bootstrap.js'
+            'react-dom$':'react-dom/dist/react-dom.js'
         }
     },
     module: {

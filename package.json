@@ -17,12 +17,15 @@
   },
   "homepage": "https://github.com/xiilei/pm2-restapi-web#readme",
   "dependencies": {
+    "async": "^1.5.2",
     "bootstrap": "^3.3.6",
     "chart.js": "^2.0.2",
     "express": "^4.13.4",
     "jquery": "^2.2.3",
     "moment": "^2.13.0",
     "rc-switch": "^1.4.2",
+    "pm2-axon": "^2.0.11",
+    "pm2-axon-rpc": "^0.3.6",
     "react": "^15.0.1",
     "react-bootstrap": "^0.29.3",
     "react-dom": "^15.0.1"
