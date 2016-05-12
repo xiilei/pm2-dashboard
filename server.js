@@ -4,7 +4,7 @@ var WebpackDevServer = require("webpack-dev-server");
 var config = require("./webpack.config");
 
 config.entry.vendor.unshift(
-    "webpack-dev-server/client?http://localhost:9615/",
+    "webpack-dev-server/client?http://localhost:9000/",
     "webpack/hot/dev-server"
 );
 
@@ -14,4 +14,4 @@ var server = new WebpackDevServer(compiler, {
     publicPath:config.output.publicPath
 });
 
-server.listen(9615);
+server.listen(9000);
