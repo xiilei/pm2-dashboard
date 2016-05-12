@@ -1,0 +1,30 @@
+{
+  /**
+   * Application configuration section
+   * http://pm2.keymetrics.io/docs/usage/application-declaration/
+   */
+  "apps" : [
+
+    // First application
+    {
+      "name"      : "api-server",
+      "script"    : "mock.js",
+      "watch"     :false,
+      "env": {
+        "DEBUG": "*",
+        "NODE_ENV":"development"
+      },
+      "env_production" : {
+        "NODE_ENV": "production"
+      }
+    },
+
+    // Second application
+    {
+      "name"      : "frontend-server",
+      "script"    : "server.js",
+      "watch"     : false,
+      "autorestart":false
+    }
+  ]
+}
