@@ -9,10 +9,11 @@ var Dashboard = React.createClass({
     },
     componentDidMount:function(){
         var self = this;
-        var win = jQuery(window);
-        win.on('resize',function(){
-            self.setState({minHeight:win.height()});
-        }).trigger('resize');
+        function resize(){
+            self.setState({minHeight:window.document.documentElement.clientHeight});
+        }
+        window.addEventListener('resize',resize);
+        resize();
     },
     render:function(){
         return (

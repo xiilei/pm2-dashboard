@@ -5,7 +5,7 @@ var path = require('path');
 var config = {
     context:__dirname+'/public',
     entry:{
-        'vendor':['jquery','react','react-dom','react-bootstrap','rc-switch','moment','chart.js'],
+        'vendor':['react','react-dom','react-bootstrap','rc-switch','moment','chart.js'],
         'index' :'./entry'
     },
     output:{
@@ -22,7 +22,7 @@ var config = {
         ],
         extensions:["", ".jsx", ".js"],
         alias:{
-            'jquery$':'jquery/dist/jquery.min.js',
+            // 'jquery$':'jquery/dist/jquery.min.js',
             'bootstrap.css$':'bootstrap/dist/css/bootstrap.css',
             'react$':'react/dist/react.js',
             'react-dom$':'react-dom/dist/react-dom.js'
@@ -39,10 +39,10 @@ var config = {
     },
     plugins: [
         new ExtractTextPlugin("css/[name].bundle.css"),
-        new webpack.optimize.CommonsChunkPlugin('vendor', '[name].bundle.js' ),
-        new webpack.ProvidePlugin({
-            jQuery: "jquery"
-        })
+        new webpack.optimize.CommonsChunkPlugin('vendor', '[name].bundle.js' )
+        // new webpack.ProvidePlugin({
+        //     jQuery: "jquery"
+        // })
     ]
 };
 
