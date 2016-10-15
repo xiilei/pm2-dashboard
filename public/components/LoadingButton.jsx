@@ -28,7 +28,8 @@ var LoadingButton = React.createClass({
         return (
             <Button 
             onClick={this.handleClick} 
-            bsStyle={this.props.bsStyle}  
+            bsStyle={this.props.bsStyle} 
+            bsSize='small' 
             disabled={this.props.disabled}>
             {isLoading ? 'loading...' : this.props.children}
             </Button>

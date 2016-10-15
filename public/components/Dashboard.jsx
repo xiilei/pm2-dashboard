@@ -14,7 +14,13 @@ var Dashboard = React.createClass({
         }
         window.addEventListener('resize',resize);
         resize();
+        this.loadCurrentStat();
     },
+
+    loadCurrentStat:function(){
+        
+    },
+
     render:function(){
         return (
             <div className="container-fluid">
