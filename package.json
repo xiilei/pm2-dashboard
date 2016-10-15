@@ -1,21 +1,21 @@
 {
-  "name": "pm2-restapi-web",
+  "name": "pm2-dashboard",
   "version": "0.0.1",
-  "description": "fontend of pm2-restapi",
+  "description": "Another dashboard of pm2",
   "main": "app.js",
   "scripts": {
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xiilei/pm2-restapi-web.git"
+    "url": "git+https://github.com/xiilei/pm2-dashboard.git"
   },
   "author": "xilei125@163.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/xiilei/pm2-restapi-web/issues"
+    "url": "https://github.com/xiilei/pm2-dashboard/issues"
   },
-  "homepage": "https://github.com/xiilei/pm2-restapi-web#readme",
+  "homepage": "https://github.com/xiilei/pm2-dashboard#readme",
   "dependencies": {
     "async": "^1.5.2",
     "bootstrap": "^3.3.6",
