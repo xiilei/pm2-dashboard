@@ -21,7 +21,6 @@
     "bootstrap": "^3.3.6",
     "chart.js": "^2.0.2",
     "express": "^4.13.4",
-    "jquery": "^2.2.3",
     "moment": "^2.13.0",
     "pm2-axon": "^2.0.11",
     "pm2-axon-rpc": "^0.3.6",
